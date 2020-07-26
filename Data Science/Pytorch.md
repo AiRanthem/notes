@@ -4,8 +4,6 @@
 
 ### 维度操作
 
-
-
 https://zhuanlan.zhihu.com/p/86763381
 
 `tensor.squeeze(dim = None, out = None) or torch.squeeze(input, dim = None, out = None)`
@@ -27,3 +25,8 @@ https://zhuanlan.zhihu.com/p/86763381
 - `dim (int)` – 插入维度的索引
 - `out (Tensor, optional)` – 结果张量
 
+### 矩阵操作
+
+`torch.bmm(a, b)`
+
+两个矩阵的乘法。a、b的size分别是 (b, n, m) (b, m, p)，输出(b, n, p)
