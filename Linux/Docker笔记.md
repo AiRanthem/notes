@@ -103,3 +103,24 @@ docker run -dp 3000:3000 \
     sh -c "yarn install && yarn run dev" # 运行的命令
 ```
 
+## 性能监控
+
+```zsh
+docker stats
+```
+
+# 小技巧
+
+## Docker的存储位置
+
+镜像和容器默认存在 `/var/lib/docker` root分区大小不够的话要修改存储位置
+
+通过软连接实现
+
+```shell
+systemctl stop docker
+mv /var/lib/docker ~/data/docker
+ln -s ~/data/docker /var/lib/docker
+systemctl start docker
+```
+
