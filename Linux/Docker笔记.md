@@ -8,6 +8,7 @@
 curl -fsSL https://get.docker.com | bash -s docker --mirror Aliyun
 # 将当前用户添加到docker组才能使用
 sudo gpasswd -a ${USER} docker
+# 配置完用户组之后要注销一下或者切换一下用户才能生效
 ```
 
 ## 基础操作
@@ -122,5 +123,16 @@ systemctl stop docker
 mv /var/lib/docker ~/data/docker
 ln -s ~/data/docker /var/lib/docker
 systemctl start docker
+```
+
+## 国内镜像
+
+```shell
+vi /etc/docker/daemon.json
+{
+    "registry-mirrors": ["http://hub-mirror.c.163.com"]
+}
+sudo systemctl daemon-reload
+sudo systemctl restart docker.service
 ```
 
