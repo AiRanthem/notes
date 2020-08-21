@@ -17,13 +17,15 @@ ServerAliveCountMax  60
 ssh -o ServerAliveInterval=30 root@192.168.1.1
 ```
 
-## 免密码登陆
+## 公钥
 
 ```zsh
 # Client
 ssh-keygen -t rsa
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+# upload to server
 scp ~/.ssh/id_rsa.pub user@ip:~/.ssh
-# Server
+# Server 免密码登录
 cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 ```
 
