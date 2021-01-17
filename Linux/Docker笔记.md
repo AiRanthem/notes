@@ -136,3 +136,10 @@ sudo systemctl daemon-reload
 sudo systemctl restart docker.service
 ```
 
+## 使用GUI
+
+```shell
+xhost + 
+docker run -ti --net host -e DISPLAY=$DISPLAY <image>
+```
+
