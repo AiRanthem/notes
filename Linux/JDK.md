@@ -30,3 +30,9 @@ sudo apt -y install oracle-java14-set-default
 sudo update-java-alternatives -s java-8-oracle
 ```
 
+## 查询JDK目录
+
+```shell
+echo $(dirname $(dirname $(realpath $(which javac))))
+```
+
