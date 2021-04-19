@@ -18,7 +18,7 @@ tar -zxvf frp_0.22.0_linux_amd64.tar.gz
 
 ## 服务端设置
 
-配置文件 `frps.isi`
+配置文件 `frps.ini`
 
 ```ini
 [common]
