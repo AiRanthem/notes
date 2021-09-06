@@ -140,6 +140,7 @@ sudo systemctl restart docker.service
 
 ```shell
 xhost + 
+# 注意：使用host模式后，不再能使用-p的端口映射，请注意避开本地端口占用。
 docker run -ti --net host -e DISPLAY=$DISPLAY <image>
 ```
 
