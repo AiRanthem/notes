@@ -9,6 +9,9 @@ sudo add-apt-repository ppa:linuxuprising/java   (oracle jdk)
 
 sudo add-apt-repository ppa:openjdk-r/ppa   (openJDK)
 
+# Ubuntu20.04直接使用
+sudo apt install openjdk-11-jdk安排
+
 sudo apt-get update
 ```
 
